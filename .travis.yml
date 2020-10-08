@@ -12,5 +12,5 @@ install:
 # command to run tests
 script:
   - pytest
-  - coverage run --source=postinumerot -m pytest test_postinumerot.py
+  - coverage run --source=postinumerot -m ./src/pytest test_postinumerot.py
   - coverage report
