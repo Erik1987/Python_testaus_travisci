@@ -6,10 +6,11 @@ before_install:
   - python3 --version
   - pip3 install -U pip
   - pip3 install -U pytest
+  - pip3 install coverage
 install:
   - pip3 install -r requirements.txt
 # command to run tests
 script:
   - pytest
- # - coverage run --source=postinumerot -m pytest test_postinumerot.py
- # - coverage report
+  - coverage run --source=postinumerot -m pytest test_postinumerot.py
+  - coverage report
